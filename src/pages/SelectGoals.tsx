@@ -38,7 +38,7 @@ const SelectGoals = () => {
                 <div className='text-xl py-1 flex justify-between items-center'>
                     <div className='flex flex-col '>
                         <p className='text-2xl font-bold'> Chosse your goals</p>
-                        <p className='text-sm'>You can choose max 2 goals only at a time</p>
+                        <p className='text-sm'>You can choose minimum 2 goals only at a time</p>
                     </div>
                     <div className='flex gap-2'>
                         <label className='font-bold'>Count</label>
