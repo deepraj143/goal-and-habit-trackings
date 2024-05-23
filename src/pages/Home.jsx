@@ -23,16 +23,16 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="flex mt-4 gap-4 flex-wrap w-full justify-center pb-60 items-center sm:gap-32 ">
+    <div className="flex mt-4 flex-col gap-4 h-[65vh] sm:gap-4 sm:mt-8">
       {selectedGoals.length > 0 && selectedGoals.map(goal=>{
         return <Link to={`/select-goals/${goal.id}`}  key={goal.id}>
-                  <div className={`flex justify-end`}>
-                    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                          <img className="p-8 rounded-t-lg" src={goal.imgUrl} alt="product image" />
-                          <div className="px-5 pb-5 flex gap-2 flex-col">
-                            <h2 className="text-2xl font-semibold tracking-tight text-lime-400">{goal.name}</h2>
-                            <h5 className="text-md font-semibold tracking-tight text-gray-900 dark:text-white">{goal.description}</h5>
-                            <div className="flex flex-col items-center justify-between w-full gap-2">
+                  <div className={`flex justify-center`}>
+                    <div className=" bg-white p-3 flex flex-col items-center border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 sm:flex-row">
+                          <img className="rounded-t-lg w-40 h-40" src={goal.imgUrl} alt="product image" />
+                          <div className=" flex gap-2 flex-col text-center sm:px-5 sm:text-start">
+                            <h2 className="text-xl font-semibold tracking-tight text-lime-400 sm:text-2xl ">{goal.name}</h2>
+                            <h5 className="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">{goal.description}</h5>
+                            <div className="flex flex-col  items-center justify-between w-full gap-2 sm:items-start">
                               <div>
                                   <div className="flex  gap-3">
                                     <span className="text-md font-bold text-gray-900 dark:text-white">{goal.startDate}</span>
