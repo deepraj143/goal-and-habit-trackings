@@ -38,7 +38,7 @@ const SelectGoals = () => {
                 <div className='text-xl py-1 flex justify-between items-center'>
                     <div className='flex flex-col '>
                         <p className='text-2xl font-bold'> Chosse your goals</p>
-                        <p className='text-sm'>You can choose only 2 goals at a time</p>
+                        <p className='text-sm'>You can choose max 2 goals only at a time</p>
                     </div>
                     <div className='flex gap-2'>
                         <label className='font-bold'>Count</label>
@@ -50,7 +50,7 @@ const SelectGoals = () => {
                     <div className=" h-[65vh] pb-10 overflow-auto grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3   lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8" >
                         {allGoalsDetails.length>0 && allGoalsDetails.map((goal)=>{
                                 return  <div className={` ${getIsSelected(goal.id) ? "bg-lime-500": "bg-gray-200"} max-h-96 p-4 shadow-2xl`} key={goal.id} data-value={goal.id} >
-                                            <div className="aspect-h-1 rounded-md aspect-w-1 w-full overflow-hidden  xl:aspect-h-8 xl:aspect-w-7"  key={goal.id} data-value={goal.id} >
+                                            <div className="aspect-h-1 rounded-md aspect-w-1 w-full overflow-hidden  xl:aspect-h-8 xl:aspect-w-7"  data-value={goal.id} >
                                                 <img src={goal.imgUrl} alt="task-images" className="h-full w-full object-cover object-center group-hover:opacity-75" data-value={goal.id} />
                                             </div>
                                             <h3 className="mt-2 text-md font-bold text-gray-900 text-center" data-value={goal.id} >{goal.name}</h3>

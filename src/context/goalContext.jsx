@@ -12,13 +12,12 @@ export const GoalProvider = ({children}) => {
     const [selectedGoals, setSelectedGoals] = useState([])
 
     const updateGoals=(goals)=>{
-        console.log(goals)
-        localStorage.setItem("SelectedGoals",JSON.stringify(goals))
+        sessionStorage.setItem("SelectedGoals",JSON.stringify(goals))
         setSelectedGoals(goals)
     }
 
     useEffect(() => {
-        const selectedGoals=JSON.parse(localStorage.getItem("SelectedGoals"))
+        const selectedGoals=JSON.parse(sessionStorage.getItem("SelectedGoals"))
         setSelectedGoals(selectedGoals || [])
     }, [])
    
