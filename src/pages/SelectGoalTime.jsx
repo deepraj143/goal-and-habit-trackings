@@ -39,7 +39,7 @@ const SelectGoalTime = () => {
                     {selectedGoals.length >0 &&  selectedGoals.map((goal)=>{
                         return <div key={goal.id} className="flex p-4  mx-auto flex-col items-center rounded-lg shadow sm:flex-row  md:max-w-fit hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img className="object-cover  w-32 rounded-t-lg h-32 rounded-s-lg m-5" src={goal.imgUrl} alt="" />
-                                    <div className="flex flex-col justify-between leading-normal">
+                                    <div className="flex flex-col justify-between leading-normal  w-auto sm:w-[40rem]">
                                         <h5 className="mb-2 text-2xl text-center font-bold tracking-tight text-lime-400 sm:text-left ">{goal.name}</h5>
                                         <p className="mb-3 font-normal text-center text-white sm:text-left ">{goal.description}</p>
                                         <div className='w-full text-center  sm:text-left'>

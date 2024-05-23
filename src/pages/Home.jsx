@@ -29,7 +29,7 @@ const Home = () => {
                   <div className={`flex justify-center`}>
                     <div className=" bg-white p-3 flex flex-col items-center border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 sm:flex-row">
                           <img className="rounded-t-lg w-40 h-40" src={goal.imgUrl} alt="product image" />
-                          <div className=" flex gap-2 flex-col text-center sm:px-5 sm:text-start">
+                          <div className=" flex gap-2 flex-col text-center w-[21.25rem] sm:px-5 sm:text-start sm:w-[40rem]">
                             <h2 className="text-xl font-semibold tracking-tight text-lime-400 sm:text-2xl ">{goal.name}</h2>
                             <h5 className="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">{goal.description}</h5>
                             <div className="flex flex-col  items-center justify-between w-full gap-2 sm:items-start">
